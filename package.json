@@ -1,0 +1,21 @@
+{
+  "name": "es6-promise",
+  "version": "1.0.0",
+  "description": "promise A+规范的实现",
+  "main": "promise.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register test/promise-test.js"
+  },
+  "keywords": [
+    "promise"
+  ],
+  "author": "photon-phalanx",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "mocha": "^5.2.0",
+    "promises-aplus-tests": "^2.1.2"
+  }
+}
