@@ -4,7 +4,7 @@
   "description": "promise A+规范的实现",
   "main": "promise.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register test/promise-test.js"
+    "test": "mocha --require babel-core/register test/promise-test.js"
   },
   "keywords": [
     "promise"

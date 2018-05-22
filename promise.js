@@ -34,10 +34,10 @@ function resolve (promise, x) {
     }
   } else if (isFunction(x) || isObject(x)) {
     // 如果x是一个对象或一个函数
-    // 将 then 赋为 x.then. [3.5]
-    const then = x.then
     let hasCalledOnce = false
     try {
+      // 将 then 赋为 x.then. [3.5]
+      const then = x.then
       // 如果 then 是一个函数
       if (isFunction(then)) {
         // 以x为this调用then函数， 且第一个参数是resolvePromise，第二个参数是rejectPromise，且：
@@ -154,19 +154,3 @@ export default class Promise {
   //   return this.then(void 0, onRejected)
   // }
 }
-
-// let promise1 = new Promise(function (resolve, reject) {
-//   setTimeout(() => {console.log(1);resolve(1)}, 1000)
-// })
-// let promise2 = promise1.then((val) => {
-//   console.log(2)
-//   return 2
-// })
-// let promise3 = promise1.then((val) => {
-//   console.log(3)
-//   return 3
-// })
-// let promise4 = promise2.then((val) => {
-//   console.log(4)
-//   return 4
-// })
